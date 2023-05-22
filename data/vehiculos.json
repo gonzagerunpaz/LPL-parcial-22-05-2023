@@ -1,0 +1,34 @@
+[
+    {
+        "patente": "AD341PO",
+        "marca": "Chevrolet",
+        "modelo": "Onix",
+        "habilitado": true,
+        "capacidad": 4,
+        "autonomiaKms": 280
+    },
+    {
+        "patente": "AF342LK",
+        "marca": "TOTOYA",
+        "modelo": "Corola",
+        "habilitado": false,
+        "capacidad": 4,
+        "autonomiaKms": 380
+    },
+    {
+        "patente": "NK808CR",
+        "marca": "Volkswagen",
+        "modelo": "Suram",
+        "habilitado": true,
+        "capacidad": 5,
+        "autonomiaKms": 240
+    },
+    {
+        "patente": "AA343OU",
+        "marca": "Toyota",
+        "modelo": "Etios",
+        "habilitado": true,
+        "capacidad": 3,
+        "autonomiaKms": 320
+    }
+]

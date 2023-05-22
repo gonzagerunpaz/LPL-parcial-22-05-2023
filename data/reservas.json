@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "cliente": "Gerardo Gonzalez",
+        "cantPersonas": 3,
+        "distancia": 315,
+        "fecha": "20230601",
+        "vehiculo": {
+            "patente": "AA343OU",
+            "marca": "Toyota",
+            "modelo": "Etios",
+            "habilitado": true,
+            "capacidad": 3,
+            "autonomiaKms": 320
+        }
+    },
+    {
+        "id": 2,
+        "cliente": "Romina Suarez",
+        "cantPersonas": 5,
+        "distancia": 100,
+        "fecha": "20230530",
+        "vehiculo": {    
+            "patente": "NK808CR",
+            "marca": "Volkswagen",
+            "modelo": "Suram",
+            "capacidad": 5,
+            "autonomiaKms": 240
+        }
+    },
+    {
+        "id": 3,
+        "cliente": "Marcela Rodriguez",
+        "cantPersonas": 4,
+        "distancia": 270,
+        "fecha": "20230530",
+        "vehiculo": {    
+            "patente": "NK808CR",
+            "marca": "Volkswagen",
+            "modelo": "Suram",
+            "capacidad": 5,
+            "autonomiaKms": 240
+        }
+    }
+]
