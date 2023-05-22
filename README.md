@@ -16,7 +16,16 @@ Un solicitante podrá agendar una reserva y el sistema le asignará el primer ve
 - [x] el vechículo debe poder transportar a la cantidad de personas de la reserva.
 - [x] el vehículo debe tener la autonomía suficiente para realizar el viaje sin detenerse.
 
-## Vehiculos
+
+## Consideraciones Generales
+
+El desarrollo deberá realizarse en **_NodeJs_** utilizando la liberería **_express__**. Deberá contener la estrucutra de rutas y controladores. Revisar la estructura de directorios propuesta en este repositorio.
+
+Toda la información deberá gestionarse en memoria, es recomendable utilizar la librería **_nodemon_** para ir viendo los cambios sin necesidad de cortar el servidor de express y volverlo a levantar.
+
+La entrega deberá ser en un repositorio de github donde el el README.md debera contener el nombre, apellido y dni del alumnos, y escribir todas las cosas que asumieron para resolver el ejercicio o consideraciones que crean conveniente realizar.
+
+### Vehículos
 
 Realizar en endpoint **/api/vehiculos** que permita realizar la consulta total de los vehículos, más la creación, modificacion y consulta de un vehículo en particular a través de su número de patente.
 
@@ -45,7 +54,7 @@ En la registración de un nuevo vehículo _POST_ **/api/vehiculos** hay que cons
 
 ```
 
-## Reservas
+### Reservas
 
 Realizar en endpoint **/api/reservas** que permita realizar la consulta total de las reservas, la creación, borrado y consulta de un reserva a través del identificador único de reserva que genera la api. 
 
@@ -64,7 +73,7 @@ En la registración de un nueva reserva _POST_ **/api/reserva** hay que consider
 5. La patente debe tener 8 digitos. Es un punto adicional validar que sea de formato YYYYDDMM, Ej 20230602 es una fecha válida, mientras que 20231402 no es una fecha validad porque sería para el mes 14. Otra fecha inválida sería 20231236 porque no existe el día 36 del mes 12
 
 
-### Condiciones de la reserva
+## Condiciones de la reserva
 - [x] el vehículo debe estar habilitado.
 - [x] el vechiculo debe poder transportar a la cantidad de personas de la reserva.
 - [x] el vehículo debe tener la autonomía suficiente para realizar el viaje sin detenerse.
@@ -103,6 +112,7 @@ El vehículo debera asociarse de acuedo a las condiciones. Si existe algún erro
 Adicionalmente también se deberá poder buscar la última reserva de un cliente.
 
 * GET **/api/reservas/search?cliente=XXXX** - Recupera la ultima la ultima reserva que realizo el cliente. En caso de no encontrar reservas deberá retornar "No encontrado"
+
 
 ## Ejemplos de creación de reservas
 
