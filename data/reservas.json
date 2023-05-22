@@ -2,7 +2,7 @@
     {
         "id": 1,
         "cliente": "Gerardo Gonzalez",
-        "cantPersonas": 3,
+        "cantPersonas": 2,
         "distancia": 315,
         "fecha": "20230601",
         "vehiculo": {
