@@ -2,35 +2,34 @@
 
 ## Parcial 22.Mayo.2023
 
-Se le solicita a los alumnos del laboratorio de programación y lenguajes de la UNPAZ que realicen de desarrollo de las siguintes apis.
+Se le solicita a los alumnos del laboratorio de programación y lenguajes de la UNPAZ que realicen el desarrollo de las siguintes apis.
 
 * reservas  (/api/reservas) 
-* vehiculos (/api/vehiculos)
+* vehiculos (/api/vehiculo)
 
 Ambas apis trabajan en conjunto y permiten gestionar la reservas de viajes que los solicitantes podrán realizar por distintas plataformas web.
 
 Un solicitante podrá agendar una reserva y el sistema le asignará el primer vehículo que cumpla con las siguientes condiciones.
 
-[[lista-destacada(lavanda){
-- el vehículo debe estar habilitado.
-- el vechículo debe poder transportar a la cantidad de personas de la reserva.
-- el vehículo debe tener la autonomía suficiente para realizar el viaje sin detenerse.
-}]]
+
+-[x] el vehículo debe estar habilitado.
+-[x] el vechículo debe poder transportar a la cantidad de personas de la reserva.
+-[x] el vehículo debe tener la autonomía suficiente para realizar el viaje sin detenerse.
 
 ## Vehiculos
 
 Realizar en endpoint **/api/vehiculos** que permita realizar la consulta total de los vehículos, más la creación, modificacion y consulta de un vehículo en particular a través de su número de patente.
 
-* GET **/api/vehiculos** - Recupera el array de vehiculos
-* GET **/api/vehiculos/:patente** - Recupera el vehiculo de la patente pasada en el path de la URL como parámetro.
-* PUT **/api/vehiculos/:patente** - Permite la modificación de solo los atributos **[habilitado, capacidad y autonomiaKms]** vehículo  de la patente pasada en el path de la URL como parámetro.
-* POST **/api/vehiculos** - Registra un nuevo vehículo
+* _GET_ **/api/vehiculos** - Recupera el array de vehículos.
+* _GET_ **/api/vehiculos/:patente** - Recupera el vehículo de la patente pasada en el path de la URL como parámetro.
+* _PUT_ **/api/vehiculos/:patente** - Permite la modificación de solo los atributos **_habilitado, capacidad y autonomiaKms_** vehículo  de la patente pasada en el path de la URL como parámetro.
+* _POST_ **/api/vehiculos** - Registra un nuevo vehículo.
 
-En la registración de un nuevo vehículo **POST** hay que considerar:
-* La patente debe tener 7 digitos. Es un punto adicional validar que sea de formato XX999XX
-* El vehiculo nunca se ingresa habilitado, siempre tiene que ser **habilitado==false** y luego si es necesario se habilitará usando el PUT para cambiar el valor de ese atributo.
-* La **capacidad** cantidad de personas a transportar debe ser un número de 1 a 10 como máximo
-* La **autonomiaKms** debe ser un numero > 0 
+En la registración de un nuevo vehículo _POST_ **/api/vehiculos** hay que considerar:
+1. La patente debe tener 7 digitos. Es un punto adicional validar que sea de formato XX999XX.
+2. El vehiculo nunca se ingresa habilitado, siempre tiene que ser **habilitado==false** y luego si es necesario se habilitará usando el _PUT_ **/api/vehiculos/:patente** para cambiar el valor de ese atributo.
+3. La **capacidad** cantidad de personas a transportar debe ser un número de 1 a 10 como máximo.
+4. La **autonomiaKms** debe ser un numero > 0. 
 
 ### Estructura del objeto vehículo
 
@@ -50,25 +49,25 @@ En la registración de un nuevo vehículo **POST** hay que considerar:
 
 Realizar en endpoint **/api/reservas** que permita realizar la consulta total de las reservas, la creación, borrado y consulta de un reserva a través del identificador único de reserva que genera la api. 
 
-* GET **/api/reservas** - Recupera el array de reservas
-* GET **/api/reservas/:id** - Recupera la reserva con el id pasado en el path de la URL como parámetro.
-* DELETE **/api/reservas/:id** - Permite el borrado del la reserva con el id pasado en el path de la URL como parámetro.
-* POST **/api/reserva** - Registra un nueva reserva
+* _GET_ **/api/reservas** - Recupera el array de reservas.
+* _GET_ **/api/reservas/:id** - Recupera la reserva con el id pasado en el path de la URL como parámetro.
+* _DELETE_ **/api/reservas/:id** - Permite el borrado del la reserva con el id pasado en el path de la URL como parámetro.
+* _POST_ **/api/reserva** - Registra un nueva reserva.
 
 
-En la registración de un nueva reserva **POST** hay que considerar:
+En la registración de un nueva reserva _POST_ **/api/reserva** hay que considerar:
 
-* el id (identeficador único de la reserva) lo deberá calcular el sistema siguiendo una secuencia incremental.
-* Que la cantidad de personas a transportar sean un número entre 1 y 10
-* Que la distancia nunca supere los 500 kms
-* El sistema deberá asociar solo el vehículo que cumple las condiciones de la reserva.  
-* La patente debe tener 8 digitos. Es un punto adicional validar que sea de formato YYYYDDMM, Ej 20230602 es una fecha válida, mientras que 20231402 no es una fecha validad porque sería para el mes 14. Otra fecha inválida sería 20231236 porque no existe el día 36 del mes 12
+1. el id (identeficador único de la reserva) lo deberá calcular el sistema siguiendo una secuencia incremental.
+2. Que la cantidad de personas a transportar sean un número entre 1 y 10.
+3. Que la distancia nunca supere los 500 kms
+4. El sistema deberá asociar solo el vehículo que cumple las condiciones de la reserva.  
+5. La patente debe tener 8 digitos. Es un punto adicional validar que sea de formato YYYYDDMM, Ej 20230602 es una fecha válida, mientras que 20231402 no es una fecha validad porque sería para el mes 14. Otra fecha inválida sería 20231236 porque no existe el día 36 del mes 12
 
 
 ### Condiciones de la reserva
-* el vehículo debe estar habilitado.
-* el vechiculo debe poder transportar a la cantidad de personas de la reserva.
-* el vehículo debe tener la autonomía suficiente para realizar el viaje sin detenerse.
+- [x] el vehículo debe estar habilitado.
+- [x] el vechiculo debe poder transportar a la cantidad de personas de la reserva.
+- [x] el vehículo debe tener la autonomía suficiente para realizar el viaje sin detenerse.
 
 ### Estructura del objeto Reserva para los GET
 ``` JSON
@@ -97,7 +96,7 @@ En la registración de un nueva reserva **POST** hay que considerar:
 }
 ```
 
-El vehículo debera asociarse de acuedo a las condiciones. Si existe algún error ne los datos enviados o no es posible asociar el vehículo el sistema deberá retornar el código correspondiente a un **bad request** indicando un mensajes descriptivo del error.
+El vehículo debera asociarse de acuedo a las condiciones. Si existe algún error en los datos enviados o no es posible asociar el vehículo el sistema deberá retornar el código correspondiente a un **bad request** indicando un mensajes descriptivo del error.
 
 ## PUNTO BONUS
 
@@ -105,7 +104,7 @@ Adicionalmente también se deberá poder buscar la última reserva de un cliente
 
 * GET **/api/reservas/search?cliente=XXXX** - Recupera la ultima la ultima reserva que realizo el cliente. En caso de no encontrar reservas deberá retornar "No encontrado"
 
-## Ejemplos
+## Ejemplos de creación de reservas
 
 Si tuvieramos los siguientes vehículos hablitados
 
