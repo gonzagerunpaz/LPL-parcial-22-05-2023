@@ -27,7 +27,7 @@ La entrega deberá ser en un repositorio de [github](https://github.com) donde e
 
 ### Vehículos
 
-Realizar en endpoint **/api/vehiculos** que permita realizar la consulta total de los vehículos, más la creación, modificacion y consulta de un vehículo en particular a través de su número de patente.
+Realizar un endpoint **/api/vehiculos** que permita realizar la consulta total de los vehículos, más la creación, modificacion y consulta de un vehículo en particular a través de su número de patente.
 
 * _GET_ **/api/vehiculos** - Recupera el array de vehículos.
 * _GET_ **/api/vehiculos/:patente** - Recupera el vehículo de la patente pasada en el path de la URL como parámetro.
@@ -57,7 +57,7 @@ En la registración de un nuevo vehículo _POST_ **/api/vehiculos** hay que cons
 
 ### Reservas
 
-Realizar en endpoint **/api/reservas** que permita realizar la consulta total de las reservas, la creación, borrado y consulta de un reserva a través del identificador único de reserva que genera la api. 
+Realizar un endpoint **/api/reservas** que permita realizar la consulta total de las reservas, la creación, borrado y consulta de un reserva a través del identificador único de reserva que genera la api. 
 
 * _GET_ **/api/reservas** - Recupera el array de reservas.
 * _GET_ **/api/reservas/:id** - Recupera la reserva con el id pasado en el path de la URL como parámetro.
@@ -70,7 +70,7 @@ En la registración de un nueva reserva _POST_ **/api/reserva** hay que consider
 1. el id (identeficador único de la reserva) lo deberá calcular el sistema siguiendo una secuencia incremental.
 2. Que la cantidad de personas a transportar sean un número entre 1 y 10.
 3. Que la distancia nunca supere los 500 kms
-4. La fecha debe tener 8 digitos. Es un punto adicional validar que sea de formato AAAADDMM.
+4. La fecha debe tener 8 digitos. Es un punto adicional validar que sea de formato AAAAMMDD.
     * 20230602 es una fecha válida
     * 20231402 no es una fecha valída porque sería para el mes 14. 
     * 20231236 Nno es una fecha válida porque no existe el día 36 del mes 12
@@ -215,4 +215,4 @@ Si se hicera la siguiente reserva
 }
 ```
 
-El sistema debera informar un ** Bad Request**  porque el formato de fecha es inválido.
+El sistema deberá informar un **Bad Request** porque el formato de fecha es inválido.
