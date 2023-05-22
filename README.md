@@ -19,11 +19,11 @@ Un solicitante podrá agendar una reserva y el sistema le asignará el primer ve
 
 ## Consideraciones Generales
 
-El desarrollo deberá realizarse en **_NodeJs_** utilizando la liberería **_express__**. Deberá contener la estrucutra de rutas y controladores. Revisar la estructura de directorios propuesta en este repositorio.
+El desarrollo deberá realizarse en **_NodeJs_** utilizando la liberería **_express_**. El código **Obligatoriamente**  deberá tener rutas y controladores para gestiona los request y response. Revisar la estructura de directorios propuesta en este repositorio.
 
 Toda la información deberá gestionarse en memoria, es recomendable utilizar la librería **_nodemon_** para ir viendo los cambios sin necesidad de cortar el servidor de express y volverlo a levantar.
 
-La entrega deberá ser en un repositorio de github donde el el README.md debera contener el nombre, apellido y dni del alumnos, y escribir todas las cosas que asumieron para resolver el ejercicio o consideraciones que crean conveniente realizar.
+La entrega deberá ser en un repositorio de (github)[https://github.com/] donde el README.md deberá al menos incluir el nombre, apellido y dni del alumno, y escribir todas las cosas que asumieron para resolver el ejercicio o consideraciones que crean conveniente realizar.
 
 ### Vehículos
 
