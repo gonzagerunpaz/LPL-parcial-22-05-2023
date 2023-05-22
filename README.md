@@ -1,21 +1,25 @@
-# Laboratorio de Programación y Lenguaje - Parcial 22.Mayo.2023
+# Laboratorio de Programación y Lenguajes 
 
-Se le solicita a los alumnos del laboratorio de programación y lenguajes que realicen de desarrollo de las siguintes apis.
+## Parcial 22.Mayo.2023
+
+Se le solicita a los alumnos del laboratorio de programación y lenguajes de la UNPAZ que realicen de desarrollo de las siguintes apis.
 
 * reservas  (/api/reservas) 
 * vehiculos (/api/vehiculos)
 
-Ambas Apis trabajan en conjunto y permiten gestionar la reservas de viajes que los solicitantes podrán realizar por distintas plataformas web.
+Ambas apis trabajan en conjunto y permiten gestionar la reservas de viajes que los solicitantes podrán realizar por distintas plataformas web.
 
-Un solicitante podrá agendar una reserva y el sistema le asignará el primer vehiculo que encuentre que cumpla con las siguientes condiciones
+Un solicitante podrá agendar una reserva y el sistema le asignará el primer vehículo que cumpla con las siguientes condiciones.
 
-* el vehículo debe estar habilitado.
-* el vechiculo debe poder transportar a la cantidad de personas de la reserva.
-* el vehículo debe tener la autonomía suficiente para realizar el viaje sin detenerse.
+[[lista-destacada(lavanda){
+- el vehículo debe estar habilitado.
+- el vechículo debe poder transportar a la cantidad de personas de la reserva.
+- el vehículo debe tener la autonomía suficiente para realizar el viaje sin detenerse.
+}]]
 
 ## Vehiculos
 
-Realizar en endpoint **/api/vehiculos** que permita realizar la consulta total de los vehiculos, más la creación, modificacion y consulta de un vehículo en particular a través de su número de patente.
+Realizar en endpoint **/api/vehiculos** que permita realizar la consulta total de los vehículos, más la creación, modificacion y consulta de un vehículo en particular a través de su número de patente.
 
 * GET **/api/vehiculos** - Recupera el array de vehiculos
 * GET **/api/vehiculos/:patente** - Recupera el vehiculo de la patente pasada en el path de la URL como parámetro.
@@ -26,7 +30,7 @@ En la registración de un nuevo vehículo **POST** hay que considerar:
 * La patente debe tener 7 digitos. Es un punto adicional validar que sea de formato XX999XX
 * El vehiculo nunca se ingresa habilitado, siempre tiene que ser **habilitado==false** y luego si es necesario se habilitará usando el PUT para cambiar el valor de ese atributo.
 * La **capacidad** cantidad de personas a transportar debe ser un número de 1 a 10 como máximo
-* La **autonomiaKms** debe ser un numero >0 
+* La **autonomiaKms** debe ser un numero > 0 
 
 ### Estructura del objeto vehículo
 
@@ -44,7 +48,7 @@ En la registración de un nuevo vehículo **POST** hay que considerar:
 
 ## Reservas
 
-Realizar en endpoint **/api/reservas** que permita realizar la consulta total de las reservas, más la creación, borrado y consulta de un reserva a través del identificador único de reserva que genera la api.
+Realizar en endpoint **/api/reservas** que permita realizar la consulta total de las reservas, la creación, borrado y consulta de un reserva a través del identificador único de reserva que genera la api. 
 
 * GET **/api/reservas** - Recupera el array de reservas
 * GET **/api/reservas/:id** - Recupera la reserva con el id pasado en el path de la URL como parámetro.
@@ -94,6 +98,12 @@ En la registración de un nueva reserva **POST** hay que considerar:
 ```
 
 El vehículo debera asociarse de acuedo a las condiciones. Si existe algún error ne los datos enviados o no es posible asociar el vehículo el sistema deberá retornar el código correspondiente a un **bad request** indicando un mensajes descriptivo del error.
+
+## PUNTO BONUS
+
+Adicionalmente también se deberá poder buscar la última reserva de un cliente.
+
+* GET **/api/reservas/search?cliente=XXXX** - Recupera la ultima la ultima reserva que realizo el cliente. En caso de no encontrar reservas deberá retornar "No encontrado"
 
 ## Ejemplos
 
