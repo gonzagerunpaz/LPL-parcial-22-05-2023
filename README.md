@@ -12,9 +12,9 @@ Ambas apis trabajan en conjunto y permiten gestionar la reservas de viajes que l
 Un solicitante podrá agendar una reserva y el sistema le asignará el primer vehículo que cumpla con las siguientes condiciones.
 
 
--[x] el vehículo debe estar habilitado.
--[x] el vechículo debe poder transportar a la cantidad de personas de la reserva.
--[x] el vehículo debe tener la autonomía suficiente para realizar el viaje sin detenerse.
+- [x] el vehículo debe estar habilitado.
+- [x] el vechículo debe poder transportar a la cantidad de personas de la reserva.
+- [x] el vehículo debe tener la autonomía suficiente para realizar el viaje sin detenerse.
 
 ## Vehiculos
 
