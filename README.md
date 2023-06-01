@@ -1,8 +1,8 @@
-# Laboratorio de Programación y Lenguajes 
+# Trabajo de Campo
 
-## Parcial 22.Mayo.2023
+## Practica de Parcial
 
-Se le solicita a los alumnos del laboratorio de programación y lenguajes de la UNPAZ que realicen el desarrollo de la siguiente api.
+Se le solicita a los alumnos de la UNPAZ que realicen el desarrollo de la siguiente api.
 
 * reservas  (/api/reservas) 
 * vehiculos (/api/vehiculo)
